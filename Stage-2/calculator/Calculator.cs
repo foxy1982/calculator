@@ -15,19 +15,19 @@ namespace calculator
             switch (operation)
             {
                 case "x":
-                    result = firstNumber * secondNumber;
+                    result = new Multiplier().Multiply(firstNumber, secondNumber);
                     break;
 
                 case "+":
-                    result = firstNumber + secondNumber;
+                    result = new Adder().Add(firstNumber, secondNumber);
                     break;
 
                 case "-":
-                    result = firstNumber - secondNumber;
+                    result = new Subtractor().Subtract(firstNumber, secondNumber);
                     break;
 
                 case "/":
-                    result = firstNumber / secondNumber;
+                    result = new Divider().Divide(firstNumber, secondNumber);
                     break;
             }
 

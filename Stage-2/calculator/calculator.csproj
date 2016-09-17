@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculation.cs" />
+    <Compile Include="QueryParser.cs" />
     <Compile Include="Subtractor.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="Adder.cs" />

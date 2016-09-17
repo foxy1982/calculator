@@ -6,28 +6,25 @@ namespace calculator
     {
         public decimal Calculate(string text)
         {
-            var parts = text.Split(' ');
-            var firstNumber = Convert.ToInt32(parts[0]);
-            var operation = parts[1];
-            var secondNumber = Convert.ToInt32(parts[2]);
+            var query = new QueryParser().Parse(text);
 
             var result = 0m;
-            switch (operation)
+            switch (query.Operation)
             {
                 case "x":
-                    result = new Multiplier().Multiply(firstNumber, secondNumber);
+                    result = new Multiplier().Multiply(query.FirstNumber, query.SecondNumber);
                     break;
 
                 case "+":
-                    result = new Adder().Add(firstNumber, secondNumber);
+                    result = new Adder().Add(query.FirstNumber, query.SecondNumber);
                     break;
 
                 case "-":
-                    result = new Subtractor().Subtract(firstNumber, secondNumber);
+                    result = new Subtractor().Subtract(query.FirstNumber, query.SecondNumber);
                     break;
 
                 case "/":
-                    result = new Divider().Divide(firstNumber, secondNumber);
+                    result = new Divider().Divide(query.FirstNumber, query.SecondNumber);
                     break;
             }
 

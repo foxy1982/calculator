@@ -11,7 +11,7 @@ That’s right, it’s a calculator!  Nothing much to see here.  The `Program.Ma
 
 The calculator class is a bit of a muddle of responsibility here so it’s time to apply the SRP - no. 1 of the SOLID acronym! We’ll pull out the actual calculation work so that the calculator is left with a single task - make the decision on which action to apply.  As a bonus, extract the query parsing logic too!
 
-### Stage 3: Unit test the operators
+### Stage 3: [Test the operators](https://github.com/foxy1982/calculator/tree/master/Stage-3)
 *Unit testing*
 
 The operators are not isolated classes so can easily be tested.  So get on with it.

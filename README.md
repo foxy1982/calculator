@@ -2,11 +2,11 @@
 
 A lot of the commercial work I’m involved with uses Dependency Injection, unit testing and method mocking.  Some developers aren’t familiar with these techniques though, and while it’s easy to say “this is how you write a unit test, this is how you do DI” etc. it can be less effective unless you know WHY you’re doing what you’re doing.  So I’ve put together this contrived and overengineered example to explain the WHY behind the HOW.  Just for the record, this isn’t how I’d normally write a calculator app… there are some things which are definitely pedantic and just not worth the effort, but life’s about the journey and not the destination right!?
 
-### Stage 1: The template
+### [Stage 1: The template](https://github.com/foxy1982/calculator/tree/master/Stage-1)
 
 That’s right, it’s a calculator!  Nothing much to see here.  The `Program.Main` method is responsible for handling user input and passes on whatever has been typed into the calculator.  This way we’ve abstracted the user interaction from the calculator, which is where we’re going to be spending time refactoring and Making Things Better.  At the moment the calculator isn’t easy to test and be sure you’ve covered most scenarios.
 
-### Stage 2: Refactor the operators into their own classes
+### [Stage 2: Refactor the operators into their own classes](https://github.com/foxy1982/calculator/tree/master/Stage-2)
 *Separation of Concerns & Extract Class*
 
 The calculator class is a bit of a muddle of responsibility here so it’s time to apply the SRP - no. 1 of the SOLID acronym! We’ll pull out the actual calculation work so that the calculator is left with a single task - make the decision on which action to apply.  As a bonus, extract the query parsing logic too!

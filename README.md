@@ -21,7 +21,7 @@ The operators are not isolated classes so can easily be tested.  So get on with 
 
 We still want to be able to test the decision logic in the calculator without testing the implementation of the operators.  This is extremely difficult while the calculator is building objects to handle the actual mathematical functions.
 
-### Stage 5: Unit test the calculator
+### [Stage 5: Unit test the calculator](https://github.com/foxy1982/calculator/tree/master/Stage-5)
 *Mocks*
 
 Now we’re in a position to test that decision logic.  So get on with it!

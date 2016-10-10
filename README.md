@@ -16,7 +16,7 @@ The calculator class is a bit of a muddle of responsibility here so it’s time 
 
 The operators are not isolated classes so can easily be tested.  So get on with it.
 
-### Stage 4: Remove the new keyword by introducing DI
+### [Stage 4: Remove the new keyword by introducing DI](https://github.com/foxy1982/calculator/tree/master/Stage-4)
 *Extract Interface*
 
 We still want to be able to test the decision logic in the calculator without testing the implementation of the operators.  This is extremely difficult while the calculator is building objects to handle the actual mathematical functions.

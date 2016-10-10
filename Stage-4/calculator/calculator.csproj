@@ -56,11 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculation.cs" />
-    <Compile Include="Interfaces\IAdder.cs" />
-    <Compile Include="Interfaces\IDivider.cs" />
-    <Compile Include="Interfaces\IMultiplier.cs" />
-    <Compile Include="Interfaces\IQueryParser.cs" />
-    <Compile Include="Interfaces\ISubtractor.cs" />
+    <Compile Include="interfaces\IAdder.cs" />
+    <Compile Include="interfaces\IDivider.cs" />
+    <Compile Include="interfaces\IMultiplier.cs" />
+    <Compile Include="interfaces\IQueryParser.cs" />
+    <Compile Include="interfaces\ISubtractor.cs" />
     <Compile Include="QueryParser.cs" />
     <Compile Include="Subtractor.cs" />
     <Compile Include="Calculator.cs" />

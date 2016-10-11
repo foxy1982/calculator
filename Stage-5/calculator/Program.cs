@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace calculator
+﻿namespace calculator
 {
+    using System;
+
     internal class Program
     {
         private static Calculator _calculator;

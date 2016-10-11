@@ -1,24 +1,11 @@
-﻿using NUnit.Framework;
-using Rhino.Mocks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace calculator.test
+﻿namespace calculator.test
 {
+    using NUnit.Framework;
+    using Rhino.Mocks;
+
     [TestFixture]
     public class CalculatorTests
     {
-        private Calculator _calculator;
-
-        private IQueryParser _mockQueryParser;
-        private IAdder _mockAdder;
-        private IDivider _mockDivider;
-        private IMultiplier _mockMultiplier;
-        private ISubtractor _mockSubtractor;
-
         [SetUp]
         public void SetUp()
         {
@@ -30,17 +17,13 @@ namespace calculator.test
             _calculator = new Calculator(_mockQueryParser, _mockMultiplier, _mockAdder, _mockSubtractor, _mockDivider);
         }
 
-        [Test]
-        public void ItShouldPassInputToQueryParser()
-        {
-            var inputText = "2 x 3";
+        private Calculator _calculator;
 
-            _mockQueryParser.Expect(x => x.Parse(Arg.Is(inputText))).Return(new Calculation("x", 2, 3));
-
-            _calculator.Calculate(inputText);
-
-            _mockQueryParser.VerifyAllExpectations();
-        }
+        private IQueryParser _mockQueryParser;
+        private IAdder _mockAdder;
+        private IDivider _mockDivider;
+        private IMultiplier _mockMultiplier;
+        private ISubtractor _mockSubtractor;
 
         [Test]
         public void ItShouldCallAdderWhenGivenPlusSymbol()
@@ -96,6 +79,18 @@ namespace calculator.test
             _mockDivider.VerifyAllExpectations();
             _mockMultiplier.VerifyAllExpectations();
             _mockSubtractor.VerifyAllExpectations();
+        }
+
+        [Test]
+        public void ItShouldPassInputToQueryParser()
+        {
+            var inputText = "2 x 3";
+
+            _mockQueryParser.Expect(x => x.Parse(Arg.Is(inputText))).Return(new Calculation("x", 2, 3));
+
+            _calculator.Calculate(inputText);
+
+            _mockQueryParser.VerifyAllExpectations();
         }
     }
 }

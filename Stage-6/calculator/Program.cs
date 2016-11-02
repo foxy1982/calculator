@@ -1,8 +1,8 @@
-﻿using Microsoft.Practices.Unity;
-using System;
-
-namespace calculator
+﻿namespace calculator
 {
+    using Microsoft.Practices.Unity;
+    using System;
+
     internal class Program
     {
         private static Calculator _calculator;

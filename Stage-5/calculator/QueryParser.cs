@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace calculator
+﻿namespace calculator
 {
+    using System;
+
     internal class QueryParser : IQueryParser
     {
         public Calculation Parse(string text)

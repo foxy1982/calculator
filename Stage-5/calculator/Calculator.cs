@@ -1,14 +1,12 @@
-﻿using System;
-
-namespace calculator
+﻿namespace calculator
 {
     internal class Calculator
     {
-        private IQueryParser _queryParser;
-        private IMultiplier _multiplier;
-        private IAdder _adder;
-        private ISubtractor _subtractor;
-        private IDivider _divider;
+        private readonly IQueryParser _queryParser;
+        private readonly IMultiplier _multiplier;
+        private readonly IAdder _adder;
+        private readonly ISubtractor _subtractor;
+        private readonly IDivider _divider;
 
         public Calculator(IQueryParser queryParser, IMultiplier multipler, IAdder adder, ISubtractor subtractor, IDivider divider)
         {

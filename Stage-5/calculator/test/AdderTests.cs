@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using NUnit.Framework;
-
-namespace calculator.test
+﻿namespace calculator.test
 {
+    using FluentAssertions;
+    using NUnit.Framework;
+
     [TestFixture]
     public class AdderTests
     {

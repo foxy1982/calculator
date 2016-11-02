@@ -26,7 +26,7 @@ We still want to be able to test the decision logic in the calculator without te
 
 Now we’re in a position to test that decision logic.  So get on with it!
 
-### Stage 6: Introduce Unity
-*DI Container*
+### [Stage 6: Introduce Unity](https://github.com/foxy1982/calculator/tree/master/Stage-6)
+*Dependency Injection Container*
 
 We’re now creating the structure of our project in a bootstrap method of the main `Program`, and explicitly specifying how to create our dependencies and finally the calculator itself.  There is another way though… use a DI container to manage this work for you.
